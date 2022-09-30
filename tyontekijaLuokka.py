@@ -11,4 +11,13 @@ class Tyontekija:
         self.palkka = palkkasumma
         self.osasto = osasto
         self.tyoKokemus = kokemus
+    
+    def tulostaTiedot(self):
+        print("Työntekijän tiedot:")
+        print(f"Nimi: {self.nimi}")
+        print(f"Ikä: {self.ika} vuotta")
+        print(f"Palkka: {self.palkka} €")
+        print(f"Osasto: {self.osasto}")
+        print(f"Työkokemus: {self.tyoKokemus} vuotta")
+    
 
