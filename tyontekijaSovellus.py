@@ -9,19 +9,22 @@ def tulostaPalkat():
     osioMerkki()
     print("Palkkavertailu:")
     for tt in tyontekijaLista:
-        tt.palkkaVertailu()
+        tt.palkkaVertailu(minimi)
 
 def tulostaHarjoittelut():
     osioMerkki()
     print("Harjoittelujen kesto:")
     for h in harjoittelijaLista:
-        h.harjoittelunKesto()
+        h.harjoittelunKesto(harjoittelu)
 
 #--- Pääohjelma --- 
 print("Palkkavertailu")
+minimi = float(input("Anna minimipalkka: "))
+harjoittelu = int(input("Anna harjoittelun maksimikesto vuosina: "))
 tyontekijaLista = []
 harjoittelijaLista = []
 syotaTiedot = "T"
+palkanMuutos = "K"
 
 while syotaTiedot != "L":
     syotaTiedot = input("Valitse T syöttääksesi uuden työntekijän tiedot, H syöttääksesi harjoittelijan tiedot ja L lopettaaksesi: ").upper()
@@ -44,4 +47,23 @@ while syotaTiedot != "L":
 print("Tietojen syöttö valmis")
 tulostaPalkat()
 tulostaHarjoittelut()
+    
+osioMerkki()
+while palkanMuutos != "E":
+    palkanMuutos = input("Haluatko muuttaa työntekijän palkkaa? K = Kyllä, E = Ei: ").upper()
+    if palkanMuutos == "K":
+        y = 0
+        for t in tyontekijaLista:
+            print(f"Numero {y}:{t.nimi}")
+            y+= 1
+        numero = int(input("Valitse työntekijän numero: "))
+        korotus = int(input("Anna korotuksen määrä euroina: "))
+        tyontekijaLista[numero].nostaPalkkaa(korotus)
+    elif palkanMuutos == "E":
+        break
+
+print("Ohjelma päättyi")
+
+for t in tyontekijaLista:
+    t.tulostaTT()
 

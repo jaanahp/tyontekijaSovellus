@@ -9,8 +9,8 @@ class Tyontekija:
         self.palkka = p
         self.tyoKokemus = k
     
-    def palkkaVertailu(self):
-        minimipalkka = 2300.00
+    def palkkaVertailu(self, m):
+        minimipalkka = m
         print(f"Nimi: {self.nimi}")
         print(f"Palkka: {self.palkka} €")
         print(f"Työkokemus: {self.tyoKokemus} vuotta")
@@ -38,8 +38,8 @@ class Harjoittelija(Tyontekija):
         Tyontekija.__init__(self, n, p, k)
         self.kesto = v
 
-    def harjoittelunKesto(self):
-        harjoittelu = 3
+    def harjoittelunKesto(self, v):
+        harjoittelu = v
         print(f"Nimi: {self.nimi}")
         print(f"Muu työkokemus vuosina: {self.tyoKokemus}")
         print(f"Harjoittelua vuosina: {self.kesto}")
