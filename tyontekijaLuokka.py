@@ -1,23 +1,35 @@
 class Tyontekija:
-    ika = 0
     nimi = ""
     tyoKokemus = 0
-    palkka = 1.00
-    osasto = ""
+    palkka = 0.00
 
-    def __init__ (self, nimi, ikavuodet, palkkasumma, osasto, kokemus):
-        self.nimi = nimi
-        self.ika = ikavuodet
-        self.palkka = palkkasumma
-        self.osasto = osasto
-        self.tyoKokemus = kokemus
+    def __init__ (self, n, p, k):
+        self.nimi = n
+        self.palkka = p
+        self.tyoKokemus = k
     
-    def tulostaTiedot(self):
-        print("Työntekijän tiedot:")
-        print(f"Nimi: {self.nimi}")
-        print(f"Ikä: {self.ika} vuotta")
-        print(f"Palkka: {self.palkka} €")
-        print(f"Osasto: {self.osasto}")
-        print(f"Työkokemus: {self.tyoKokemus} vuotta")
+    def tulostaTT(self):
+        print(f"Työntekijä: {self.nimi}")
+        print(f"Palkka €: {self.palkka}")
+        print(f"Työkokemus vuosina: {self.tyoKokemus}")
+    
+    def nostaPalkkaa(self, n):
+        self.palkka = self.palkka + n
+
+class Harjoittelija(Tyontekija):
+    kesto = 0
+
+    def __init__(self, n, p, k, v):
+        Tyontekija.__init__(self, n, p, k)
+        self.kesto = v
+    
+    def tulostaH(self):
+        print(f"Työntekijä: {self.nimi}")
+        print(f"Palkka: {self.palkka}")
+        print(f"Työkokemus: {self.tyoKokemus}")
+        print(f"Harjoittelun kesto: {self.kesto} vuotta")
+
+
+
     
 
