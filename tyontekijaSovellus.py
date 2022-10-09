@@ -24,8 +24,14 @@ while syotaTiedot != "L":
     elif syotaTiedot == "L":
         break
 
-for t in tyontekijaLista:
-    t.tulostaTT()
-
+print("Tietojen syöttö valmis")
+print("------------------------------------------------------------------------------------")
+print("Palkkatiedot:")
+for tt in tyontekijaLista:
+    tt.palkkaVertailu()
+print("------------------------------------------------------------------------------------")
+print("Harjoittelujen kesto:")
 for h in harjoittelijaLista:
-    h.tulostaH()
+    h.harjoittelunKesto()
+
+
