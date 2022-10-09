@@ -1,5 +1,6 @@
 from tyontekijaLuokka import Tyontekija
 from tyontekijaLuokka import Harjoittelija
+import re
 
 #--- Funktiot --- 
 def ilmoitus():
@@ -10,7 +11,13 @@ def osioMerkki():
 
 #Funktiot työntekijän ja harjoittelijan ominaisuuksien luomiseen
 def annaNimi():
-    nimi = input("Anna koko nimi: ")
+    nimi = ""
+    testi = False
+    while testi != True:
+        nimi = input("Anna koko nimi: ")
+        #RegEx -testi tarkistaa, että nimi-muuttujaan syötetty tieto sisältää vain isoja tai pieniä kirjaimia väliltä a-ö [a-öA-Ö] tai tyhjää väliä (\s), samaa kirjainta saa olla useampikin (+) ja
+        #sana voi myös päättyä näihin ($). Jos tämä pitää paikkansa, regex palauttaa testin tulokseksi True.
+        testi = bool(re.match('[a-öA-Ö\s]+$', nimi))
     return nimi
 
 def syotaPalkka():
