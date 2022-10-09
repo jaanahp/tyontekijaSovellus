@@ -1,6 +1,23 @@
 from tyontekijaLuokka import Tyontekija
 from tyontekijaLuokka import Harjoittelija
 
+#--- Funktiot ---
+def osioMerkki():
+    print("------------------------------------------------------------------------------------")
+
+def tulostaPalkat():
+    osioMerkki()
+    print("Palkkavertailu:")
+    for tt in tyontekijaLista:
+        tt.palkkaVertailu()
+
+def tulostaHarjoittelut():
+    osioMerkki()
+    print("Harjoittelujen kesto:")
+    for h in harjoittelijaLista:
+        h.harjoittelunKesto()
+
+#--- Pääohjelma --- 
 print("Palkkavertailu")
 tyontekijaLista = []
 harjoittelijaLista = []
@@ -25,13 +42,6 @@ while syotaTiedot != "L":
         break
 
 print("Tietojen syöttö valmis")
-print("------------------------------------------------------------------------------------")
-print("Palkkatiedot:")
-for tt in tyontekijaLista:
-    tt.palkkaVertailu()
-print("------------------------------------------------------------------------------------")
-print("Harjoittelujen kesto:")
-for h in harjoittelijaLista:
-    h.harjoittelunKesto()
-
+tulostaPalkat()
+tulostaHarjoittelut()
 

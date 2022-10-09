@@ -1,3 +1,4 @@
+#--- Pääluokka --- 
 class Tyontekija:
     nimi = ""
     tyoKokemus = 0
@@ -29,6 +30,7 @@ class Tyontekija:
     def nostaPalkkaa(self, n):
         self.palkka = self.palkka + n
 
+#--- Alaluokka --- 
 class Harjoittelija(Tyontekija):
     kesto = 0
 
