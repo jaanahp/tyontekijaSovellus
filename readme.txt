@@ -36,3 +36,11 @@ Silmukoiden käyttö
 Funktioiden ja metodien käyttö
 Luokkien ja olioiden käyttö
 Luokkien eriyttäminen omaan tiedostoon
+****
+Arviointi: 5/5p
+Moro!
+Hienoa työtä! Periytymistäkin löytyy luokkapuolelta ja viantarkastelua regexillä.
+Funktioiden käyttö on perusteltua ja koodi on sopivan kommentoitua ja helppolukuista. 
+Eli kieltämättä palautuksesi täyttää kaikki projektin vaatimukset ja melkolailla enemmän :)
+Seliteteksti oli kattava ja ohjelmisto täysin kuvauksen mukaan.
+Jatka samaan malliin!
